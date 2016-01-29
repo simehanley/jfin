@@ -6,7 +6,7 @@ import org.joda.time.LocalDate;
 
 import com.jfin.enums.JFinCurveFactor;
 
-public abstract class AbstractJFinCurveFactor implements Serializable {
+public abstract class AbstractJFinCurveFactor implements Serializable, Comparable<AbstractJFinCurveFactor> {
 
 	private static final long serialVersionUID = 6124232246132378012L;
 
@@ -37,4 +37,8 @@ public abstract class AbstractJFinCurveFactor implements Serializable {
 
 	/** curve factor type **/
 	public abstract JFinCurveFactor type();
+
+	public int compareTo(AbstractJFinCurveFactor factor) {
+		return factorMaturity().compareTo(factor.factorMaturity());
+	}
 }
