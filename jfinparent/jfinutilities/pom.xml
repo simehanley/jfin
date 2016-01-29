@@ -10,4 +10,12 @@
 	</parent>
 
 	<artifactId>jfinutilities</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.jfin</groupId>
+			<artifactId>jfinmodel</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
 </project>
